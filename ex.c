@@ -70,25 +70,7 @@ void add_student(int level, int class, Student*  student) {
         current->next = student;
     }
 }
-Student* create_student(char* first_name, char* last_name, char* phone, int* grades);
-void parseLine(char* line) {
-    char firstName[50] ; // Initialize with an empty string
-    char lastName[50] ;  // Initialize with an empty string
-    char tel[11] ; 
-    int level;
-    int class;
-    int grades[10];
-    
-    if (!sscanf(line, "%s %s %s %d %d %d %d %d %d %d %d %d %d %d %d",
-               firstName, lastName, tel, &level, &class, &grades[0], &grades[1], &grades[2], &grades[3],
-               &grades[4], &grades[5], &grades[6], &grades[7], &grades[8], &grades[9])) {
-        printf("Error parsing line: %s\n", line);
-        return;
-    }
-    Student* new_student = create_student(firstName, lastName, tel, grades);
-    
-    add_student(level, class, new_student);
-    }
+
 
 
 Student* create_student(char* first_name, char* last_name, char* phone, int* grades) {
@@ -126,23 +108,7 @@ void printAllStudents() {
         }
     }
 }
-//int main1() {
-    // Example usage of readFromFileAndAddToDatabase function
-  //  const char* filename = "studentswithclass.txt";
-    
-    //for (int i = 0; i < LEVELS; i++) {
-      //  for (int j = 0; j < CLASS; j++) {
-        //    school[i][j] = NULL;
-        //}
-    //}
 
-    //readFromFileAndAddToDatabase(filename);
-    //printAllStudents();
-    //freeStudents();
-   
-    //return 0;
-
-//}
 
 
 void insertNewStudent(){
